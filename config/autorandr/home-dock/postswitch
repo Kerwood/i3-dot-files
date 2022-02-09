@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Send notification
+notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"
+
+# Set background
+feh --bg-scale ~/Pictures/background.jpg
+
+# Relaunch polybar
+ ~/.config/polybar/polybar-launch.sh
+
+# Position workspaces
+i3-msg "workspace number 1; move workspace to output DP-1-8"
+i3-msg "workspace number 2; move workspace to output DP-2-2"
+i3-msg "workspace number 3; move workspace to output DP-2-3-8"
