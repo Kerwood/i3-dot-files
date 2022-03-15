@@ -4,6 +4,7 @@ import:
   - ~/.config/alacritty/dracula.yml
 
 window:
+  opacity: 0.9
   padding:
     x: 6
     y: 6
@@ -22,10 +23,6 @@ font:
   bold_italic:
     family: Hack Nerd Font
     style: Bold Italic
-
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9
 
 selection:
   save_to_clipboard: true
