@@ -8,9 +8,10 @@ killall -q polybar
 # Launch bar1 and bar2
 polybar top-primary 2>&1 | tee -a /tmp/polybar-primary.log & disown
 
-if [[ $(xrandr --listmonitors | grep DP-2-3-8 | wc -l) -eq 1 && $(xrandr --listmonitors | grep DP-1-8 | wc -l) -eq 1 ]]; then 
-  polybar DP-2-3-8 2>&1 | tee -a /tmp/polybar-DP-2-3-8.log & disown
-  polybar DP-1-8 2>&1 | tee -a /tmp/polybar-DP-1-8-2.log & disown
-fi
+HOME_LEFT=$(xrandr --listmonitors | grep -o 'HDMI-1$')
+HOME_RIGHT=$(xrandr --listmonitors | grep -o 'DP-2-3-8$')
+
+if [[ $HOME_LEFT ]]; then polybar $HOME_LEFT 2>&1 | tee -a /tmp/polybar-$HOME_LEFT.log & disown; fi
+if [[ $HOME_RIGHT ]]; then polybar $HOME_RIGHT 2>&1 | tee -a /tmp/polybar-$HOME_RIGHT.log & disown; fi
 
 echo "Bars launched..."
