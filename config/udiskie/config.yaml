@@ -1,0 +1,8 @@
+program_options:
+  tray: auto
+  menu: nested
+device_config:
+- id_type: squashfs
+  ignore: true
+- is_loop: true
+  ignore: true

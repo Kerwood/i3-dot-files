@@ -11,6 +11,12 @@
 
 set $mod Mod1
 
+# Eg. used for Balena Etcher
+exec_always --no-startup-id lxpolkit
+
+# Automount USB drives.
+exec_always --no-startup-id udiskie -c ~/.config/udiskie/config.yaml
+
 # Background
 exec_always --no-startup-id feh --bg-scale ~/Pictures/background.jpg
 
