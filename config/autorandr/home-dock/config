@@ -6,15 +6,11 @@ output HDMI-1
 off
 output DP-2
 off
-output DP-2-1
-off
 output DP-2-3
 off
 output DP-2-3-1
 off
-output DP-1-1
-off
-output DP-1-8
+output DP-2-1
 crtc 2
 mode 2560x1440
 pos 0x0
@@ -27,6 +23,7 @@ output DP-2-2
 crtc 0
 mode 2560x1440
 pos 2560x0
+primary
 rate 59.95
 x-prop-audio auto
 x-prop-broadcast_rgb Automatic
