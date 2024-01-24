@@ -23,9 +23,9 @@ x-prop-broadcast_rgb Automatic
 x-prop-max_bpc 12
 x-prop-non_desktop 0
 output HDMI-1
-crtc 1
+crtc 2
 mode 1680x1050
-pos 0x390
+pos 0x70
 rate 59.95
 x-prop-aspect_ratio Automatic
 x-prop-audio auto
